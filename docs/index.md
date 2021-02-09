@@ -76,7 +76,7 @@ a su máquina virtual del IaaS.
 Una vez hecho lo anterior, vuelva a pulsar `F1`, teclee `ssh`, pulse sobre `Connect to Host...` y haga clic
 sobre el nombre de su máquina virtual. La conexión SSH se iniciará. Para comprobar que se ha conectado a su
 máquina virtual de manera remota, abra una terminal desde el propio VSCode, pulsando la combinación de teclas
-`Ctrl + Shift + \``. En la terminal teclee el siguiente comando:
+`Ctrl + Shift + ``. En la terminal teclee el siguiente comando:
 
 ```bash
 [~()]$hostname
