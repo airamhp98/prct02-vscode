@@ -90,11 +90,10 @@ conectarse.
 
 ## Sesiones colaborativas con Visual Studio Live Share
 
-[Visual Studio Live Share](https://code.visualstudio.com/blogs/2017/11/15/live-share) permite colaborar en las
-tareas de desarrollo en tiempo real. Para poder utilizarlo, en primer lugar, debe buscar e instalar la extensión
-denominada
+Visual Studio Live Share permite colaborar en las tareas de desarrollo en tiempo real. Para poder utilizarlo,
+en primer lugar, debe buscar e instalar la extensión denominada
 [*Live Share Extension Pack*](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack),
-así como todas las extensiones recomendadas que podrá encontrar en el enlace anterior.
+así como todas las extensiones recomendadas que podrá encontrar al final del sitio Web del enlace anterior.
 
 Una vez hecho lo anterior, siga las instrucciones proporcionadas en la sección *Getting Started* del enlace anterior
 para iniciar una sesión colaborativa. Comparta el enlace con otros estudiantes y pruebe las diferentes funcionalidades
@@ -102,3 +101,137 @@ como, por ejemplo, los chats, llamadas o pizarra. Cabe mencionar que si está us
 a la máquina virtual del IaaS, no podrá utilizar la funcionalidad de llamadas en una sesión colaborativa.
 
 Para más información, puede leer la [documentación de Visual Studio Live Share](https://docs.microsoft.com/en-us/visualstudio/liveshare/).
+
+## Primer proyecto en TypeScript: "Hola Mundo"
+
+En primer lugar, quizás sería interesante que instalase las siguientes extensiones:
+* Vim. Sobre todo para aquellas personas acostumbradas a editar usando el editor Vim (opcional).
+* ESLint. Permite realizar comprobaciones de estilo sobre ficheros que incluyan código fuente en JavaScript y TypeScript (obligatorio).
+
+Ahora, lo que haremos será instalar el compilador de TypeScript. Para ello, usaremos npm:
+
+```bash
+[~()]$npm install --global typescript
+
+added 1 package, and audited 2 packages in 2s
+
+found 0 vulnerabilities
+[~()]$tsc --version
+Version 4.1.3
+```
+La opción `--global` permite instalar el paquete de manera global.
+
+A continuación, ejecute los siguientes comandos desde una terminal de VSCode. Recuerde que puede iniciarla a través de la
+combinación de teclas `Ctrl + Shift + ``:
+
+```bash
+[~()]$pwd
+/home/usuario
+[~()]$mkdir hello-world
+[~()]$cd hello-world/
+[~/hello-world()]$npm init --yes
+Wrote to /home/usuario/hello-world/package.json:
+
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+[~/hello-world()]$ls -lrtha
+total 12K
+drwxr-xr-x 26 usuario usuario 4,0K feb  9 18:46 ..
+drwxrwxr-x  2 usuario usuario 4,0K feb  9 18:48 .
+-rw-rw-r--  1 usuario usuario  225 feb  9 18:48 package.json
+[~/hello-world()]$
+```
+
+El comando `npm init --yes` permite crear un fichero denominado `package.json`, el cual se utiliza, entre otras cosas,
+para establecer las dependencias de desarrollo y ejecución del proyecto a modo de paquetes de los que depende el
+proyecto actual. Puede observar el contenido de dicho fichero como parte de la salida del comando `npm init`.
+
+Abra el directorio `~/hello-world` en el explorador de Visual Studio Code. Para ello, vaya al menú `File` y haga clic
+en la opción `Open Folder...`. A continuación, seleccione `hello-world` en el menú desplegable. Se abrirá una instancia
+de VSCode y en el explorador podremos ver el contenido de dicho directorio.
+
+También puede añadir el directorio a un espacio de trabajo (*workspace*). Para ello, vaya al menú `File` y seleccione
+la opción `Add Folder to Workspace...`. Seleccione `hello-world` en el menú desplegable. Si no tenía un espacio de trabajo
+creado previamente, se creará uno nuevo y se añadirá el directorio al mismo. Guarde el espacio de trabajo seleccionando
+la opción `Save Workspace As...` del menú `File`, escriba un nombre de fichero y pulse el botón `OK`.
+
+Cree un nuevo fichero en el directorio `hello-world` denominado `tsconfig.json`. Puede hacerlo haciendo uso de la terminal
+de VSCode o de su explorador. En dicho fichero se especifican las opciones del compilador de TypeScript. Incluya las
+siguientes líneas en dicho fichero:
+
+```bash
+[~/hello-world()]$touch tsconfig.json
+[~/hello-world()]$cat tsconfig.json 
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "module": "CommonJS"
+  }
+}
+```
+
+Básicamente, estas opciones de configuración le indican al compilador de TypeScript que, en primer lugar, queremos generar
+código compatible con uno de los últimos estándares de JavaScript. En segundo lugar, que el código JavaScript producto de la
+compilación se almacenará en un directorio `dist`. En tercer lugar, especificamos que el código fuente escrito en TypeScript
+se encuentra en el directorio `src`. Por último, se indica un estándar para cargar código desde ficheros independientes. Más
+adelante, veremos en mayor detalle el compilador de TypeScript y sus opciones.
+
+Ahora, añadiremos un fichero con código TypeScript. Ejecute los siguientes comandos en la terminal de VSCode:
+
+```bash
+[~/hello-world()]$pwd
+/home/usuario/hello-world
+[~/hello-world()]$mkdir src
+[~/hello-world()]$cd src
+[~/hello-world/src()]$touch index.ts
+[~/hello-world/src()]$ls
+index.ts
+```
+
+Abra el fichero index.ts y añada las siguientes líneas al mismo:
+
+```typescript
+let myString: string = "Hola Mundo";
+console.log(myString);
+```
+
+En la terminal de VSCode, compile el código ejecutando el siguiente comando:
+
+```bash
+tsc
+```
+
+Lo anterior habrá creado el directorio `dist`, además del fichero `index.js` en su interior. Eche un vistazo a
+los ficheros `./src/index.ts` y `./dist/index.js` para ver si existe alguna diferencia.
+
+```bash
+[~/hello-world()]$tsc
+[~/hello-world()]$diff src/index.ts dist/index.js 
+1c1
+< let myString: string = "Hola Mundo";
+---
+> let myString = "Hola Mundo";
+```
+
+Como puede observarse, la principal diferencia se encuentra en la declaración de la variable `myString`. TypeScript
+utiliza tipos para tratar de evitar los problemas que ocurren con JavaScript, el cual no es un lenguaje tipado.
+
+Por último, ejecute el código JavaScript generado a partir del código TypeScript mediante el siguiente comando:
+
+```bash
+[~/hello-world()]$node dist/index.js
+Hola Mundo
+```
