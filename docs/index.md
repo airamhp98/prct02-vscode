@@ -41,7 +41,7 @@ A continuación, lea los tutoriales sobre VSCode y aprenda las funcionalidades b
 * [Multiroot Workspaces](https://code.visualstudio.com/docs/editor/multi-root-workspaces)
 * [Accessibility](https://code.visualstudio.com/docs/editor/accessibility)
 
-## Configuración de VSCode para conectarse a una máquina remota por SSH
+## Configuración de Visual Studio Code para conectarse a una máquina remota por SSH
 
 En este apartado, llevaremos a cabo la configuración necesaria para [conectarnos desde VSCode a una máquina
 remota por SSH](https://code.visualstudio.com/docs/remote/ssh-tutorial), en concreto, a nuestra máquina
@@ -70,13 +70,13 @@ Host iaas-dsi2
   User usuario
 ```
 
-Tenga en cuenta que donde pone `iaas-dsi2`, debe sustituirlo por el nombre de host que le otorgó en su momento
+Tenga en cuenta que donde pone `iaas-dsi2`, deberá indicar el nombre de host que le otorgó en su momento
 a su máquina virtual del IaaS.
 
 Una vez hecho lo anterior, vuelva a pulsar `F1`, teclee `ssh`, pulse sobre `Connect to Host...` y haga clic
-sobre el nombre de su máquina virtual. La conexión SSH se iniciará. Para comprobar que se ha conectado a su
-máquina virtual de manera remota, abra una terminal desde el propio VSCode, pulsando la combinación de teclas
-`Ctrl + Shift + ``. En la terminal teclee el siguiente comando:
+sobre el nombre de su máquina virtual. Se iniciará una nueva instancia de VSCode y se iniciará la conexión
+SSH. Para comprobar que se ha conectado a su máquina virtual de manera remota, abra una terminal desde el
+propio VSCode, pulsando la combinación de teclas `Ctrl + Shift + ``. En la terminal teclee el siguiente comando:
 
 ```bash
 [~()]$hostname
@@ -84,4 +84,21 @@ iaas-dsi2
 [~()]$
 ```
 
-Como puede observar, dicho comando devuelve el nombre de host de la máquina virtual remota.
+Como puede observar, dicho comando devuelve el nombre de host de la máquina virtual remota. En la esquina inferior
+izquierda de la interfaz, en un área de color verde, podrá ver el nombre de la máquina virtual a la que acaba de
+conectarse.
+
+## Sesiones colaborativas con Visual Studio Live Share
+
+[Visual Studio Live Share](https://code.visualstudio.com/blogs/2017/11/15/live-share) permite colaborar en las
+tareas de desarrollo en tiempo real. Para poder utilizarlo, en primer lugar, debe buscar e instalar la extensión
+denominada
+[*Live Share Extension Pack*](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack),
+así como todas las extensiones recomendadas que podrá encontrar en el enlace anterior.
+
+Una vez hecho lo anterior, siga las instrucciones proporcionadas en la sección *Getting Started* del enlace anterior
+para iniciar una sesión colaborativa. Comparta el enlace con otros estudiantes y pruebe las diferentes funcionalidades
+como, por ejemplo, los chats, llamadas o pizarra. Cabe mencionar que si está usando una instancia de VSCode conectada
+a la máquina virtual del IaaS, no podrá utilizar la funcionalidad de llamadas en una sesión colaborativa.
+
+Para más información, puede leer la [documentación de Visual Studio Live Share](https://docs.microsoft.com/en-us/visualstudio/liveshare/).
