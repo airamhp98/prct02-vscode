@@ -211,14 +211,13 @@ console.log(myString);
 En la terminal de VSCode, compile el código ejecutando el siguiente comando:
 
 ```bash
-tsc
+[~/hello-world()]$tsc
 ```
 
 Lo anterior habrá creado el directorio `dist`, además del fichero `index.js` en su interior. Eche un vistazo a
 los ficheros `./src/index.ts` y `./dist/index.js` para ver si existe alguna diferencia.
 
 ```bash
-[~/hello-world()]$tsc
 [~/hello-world()]$diff src/index.ts dist/index.js 
 1c1
 < let myString: string = "Hola Mundo";
@@ -226,8 +225,9 @@ los ficheros `./src/index.ts` y `./dist/index.js` para ver si existe alguna dife
 > let myString = "Hola Mundo";
 ```
 
-Como puede observarse, la principal diferencia se encuentra en la declaración de la variable `myString`. TypeScript
-utiliza tipos para tratar de evitar los problemas que ocurren con JavaScript, el cual no es un lenguaje tipado.
+Como puede observarse, la principal diferencia se encuentra en la declaración de la variable `myString`. Una de las
+principales funcionalidades de TypeScript es que utiliza tipos para tratar de evitar los problemas que surgen con
+JavaScript, el cual no es un lenguaje tipado.
 
 Por último, ejecute el código JavaScript generado a partir del código TypeScript mediante el siguiente comando:
 
