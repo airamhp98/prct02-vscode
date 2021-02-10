@@ -242,3 +242,7 @@ Por último, ejecute el código JavaScript generado a partir del código TypeScr
 [~/hello-world()]$node dist/index.js
 Hola Mundo
 ```
+
+Recuerde que debe cumplimentar un informe, a modo de GitHub Page, con todos los pasos que ha llevado a cabo para el desarrollo de esta práctica.
+El repositorio debe ser el que se haya creado automáticamente tras haber aceptado la asignación de GitHub Classroom.
+En el aula virtual de la asignatura, deberá entregar el enlace a dicho repositorio en la tarea correspondiente.
