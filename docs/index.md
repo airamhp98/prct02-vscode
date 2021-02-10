@@ -10,8 +10,8 @@ los diferentes problemas a los que se han enfrentado con sus respectivas solucio
 
 1. Acepte la [asignación de GitHub Classroom](https://classroom.github.com/a/qLJQaDvS) asociada a esta práctica.
 2. Lea esta breve [introducción a Markdown](https://guides.github.com/features/mastering-markdown/). Deberá usar Markdown como lenguaje para escribir sus informes de prácticas. Lea el siguiente recurso sobre [GitHub Pages](https://docs.github.com/en/github/working-with-github-pages). Habilite GitHub Pages en el repositorio asociado a esta práctica y desarrolle el informe de la misma como una GitHub Page haciendo uso de Markdown. GitHub Pages utiliza Jekyll, una herramienta que transforma ficheros de texto en sitios Web. Para más información, visite el sitio Web de [Jekyll](https://jekyllrb.com/). Los siguientes cursos de [GitHub Learning Lab](https://lab.github.com/) también le podrían ser de ayuda para acometer esta tarea:
-  * [GitHub Pages](https://lab.github.com/githubtraining/github-pages)
-  * [Communicating using Markdown](https://lab.github.com/githubtraining/communicating-using-markdown)
+    * [GitHub Pages](https://lab.github.com/githubtraining/github-pages)
+    * [Communicating using Markdown](https://lab.github.com/githubtraining/communicating-using-markdown)
 
 ## Instalación y funcionalidad de Visual Studio Code
 
