@@ -235,3 +235,11 @@ Por último, ejecute el código JavaScript generado a partir del código TypeScr
 [~/hello-world()]$node dist/index.js
 Hola Mundo
 ```
+
+Recuerde que debe cumplimentar un informe, a modo de GitHub Page, con todos los pasos que ha llevado a cabo para el desarrollo de esta práctica.
+El repositorio debe ser el que se haya creado automáticamente tras haber aceptado la asignación de GitHub Classroom.
+En el aula virtual de la asignatura, deberá entregar el enlace a dicho repositorio en la tarea correspondiente.
+
+Además, ahora que ya tiene todas las herramientas necesarias para empezar a trabajar en la asignatura, lleve a cabo, si no lo ha hecho antes,
+la lectura de la primera parte del libro [*Essential TypeScript: From Beginner to Pro*](https://learning.oreilly.com/library/view/essential-typescript-from/9781484249796/html/Part_1.xhtml). Trate de ir haciendo algunos de los ejercicios planteados por el autor.
+No será necesario incluir esta última parte en el informe de la práctica.
