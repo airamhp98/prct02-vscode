@@ -102,10 +102,16 @@ en primer lugar, debe buscar e instalar la extensión denominada
 [*Live Share Extension Pack*](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack),
 así como todas las extensiones recomendadas que podrá encontrar al final del sitio Web del enlace anterior.
 
-Una vez hecho lo anterior, siga las instrucciones proporcionadas en la sección *Getting Started* del enlace anterior
-para iniciar una sesión colaborativa. Comparta el enlace con otros estudiantes y pruebe las diferentes funcionalidades
-como, por ejemplo, los chats, llamadas o pizarra. Cabe mencionar que si está usando una instancia de VSCode conectada
-a la máquina virtual del IaaS, no podrá utilizar la funcionalidad de llamadas en una sesión colaborativa.
+Cabe mencionar en este punto que, si por ejemplo, estuviera conectado por SSH a una máquina remota como la del IaaS,
+las extensiones se instalarán en dicha máquina remota y no en la máquina local. Para instalar extensiones en la
+máquina local, primero tendrá que desconectarse de la máquina remota. Luego, podrá instalar
+las mismas extensiones en la máquina remota, si fuera necesario, volviendo a conectarse a la misma.
+
+Una vez instaladas todas las extensiones necesarias, siga las instrucciones proporcionadas en la sección *Getting Started*
+del enlace mencionado más arriba para iniciar una sesión colaborativa. Comparta el enlace con otros estudiantes y pruebe
+las diferentes funcionalidades como, por ejemplo, los chats, llamadas o pizarra. Es importante indicar que, si está usando
+una instancia de VSCode conectada a la máquina virtual del IaaS, no podrá utilizar la funcionalidad de llamadas en una
+sesión colaborativa.
 
 Para más información, puede leer la [documentación de Visual Studio Live Share](https://docs.microsoft.com/en-us/visualstudio/liveshare/).
 
