@@ -7,3 +7,5 @@ durante toda la asignatura, esto es, Visual Studio Code.
 
 Tendrán que llevar a cabo un informe acerca de todos los pasos que han seguido, además de enumerar
 los diferentes problemas a los que se han enfrentado con sus respectivas soluciones.
+
+Para comenzar, haz clic [aquí](docs/index.md).
